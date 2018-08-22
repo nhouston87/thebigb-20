@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const GameSchema = new Schema({
-  // user: {
-  //   type: Schema.types.ObjectId,
-  //   ref: 'users'
-  // },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'users'
+  },
   hero: {
     name: {
       type: String,
