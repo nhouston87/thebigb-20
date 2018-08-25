@@ -19,6 +19,22 @@ const GameSchema = new Schema({
       type: Number,
       default: 0
     },
+    healthcur: {
+      type: Number,
+      default: 100
+    },
+    healthmax: {
+      type: Number,
+      default: 100
+    },
+    magiccur: {
+      type: Number,
+      default: 100
+    },
+    magicmax: {
+      type: Number,
+      default: 100
+    },
     attack: {
       type: Number,
       default: 20
@@ -56,6 +72,10 @@ const GameSchema = new Schema({
         type: String,
         default: 'Leather Armor'
       }
+    },
+    gold: {
+      type: Number,
+      default: 0
     }
   },
   game: {

@@ -1,4 +1,5 @@
-module.exports = {
-  mongoURI: "mongodb://dbadmin:SuperAdventure18@ds143131.mlab.com:43131/thebigb-dev",
-  secretOrKey: 'askdjfsadfkjadslkjasdlkhsadfgalksjdfnlaksjd'
+if(process.env.NODE_ENV === 'production' ){
+  module.exports = require('/keys_prod');
+} else {
+  module.exports = require('./keys_dev');
 }

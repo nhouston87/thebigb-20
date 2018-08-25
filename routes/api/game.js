@@ -37,11 +37,16 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
         if(req.body.heroname) gameFields.hero.name = req.body.heroname;
         if(req.body.herolevel) gameFields.hero.level = req.body.herolevel;
         if(req.body.heroexp) gameFields.hero.experience = req.body.heroexp;
+        if(req.body.herohealthcur) gameFields.hero.healthcur = req.body.herohealthcur;
+        if(req.body.herohealthmax) gameFields.hero.healthmax = req.body.herohealthmax;
+        if(req.body.heromagiccur) gameFields.hero.magiccur = req.body.heromagiccur;
+        if(req.body.heromagicmax) gameFields.hero.magicmax = req.body.heromagicmax;
         if(req.body.heroattack) gameFields.hero.attack = req.body.heroattack;
         if(req.body.herodeffense) gameFields.hero.deffense = req.body.herodeffense;
         if(req.body.herospecialatk) gameFields.hero.specialatk = req.body.herospecialatk;
         if(req.body.herospecialdef) gameFields.hero.specialdef = req.body.herospecialdef;
         if(req.body.heroactivespecmoves) gameFields.hero.activespecmoves = req.body.heroactivespecmoves;
+        if(req.body.herogold) gameFields.hero.gold = req.body.herogold;
         // Hero equiped items fields
         gameFields.hero.equiped = {};
         if(req.body.equipedsword) gameFields.hero.equiped.sword = req.body.equipedsword;
@@ -61,11 +66,16 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
         if(req.body.heroname == null) gameFields.hero.name = game.hero.name;
         if(req.body.herolevel == null) gameFields.hero.level = game.hero.level;
         if(req.body.heroexp == null) gameFields.hero.experience = game.hero.experience;
+        if(req.body.herohealthcur == null) gameFields.hero.healthcur = game.hero.healthcur;
+        if(req.body.herohealthmax == null) gameFields.hero.healthmax = game.hero.healthmax;
+        if(req.body.heromagiccur == null) gameFields.hero.magiccur = game.hero.magiccur;
+        if(req.body.heromagicmax == null) gameFields.hero.magicmax = game.hero.magicmax;
         if(req.body.heroattack == null) gameFields.hero.attack = game.hero.attack;
         if(req.body.herodeffense == null) gameFields.hero.deffense = game.hero.deffense;
         if(req.body.herospecialatk == null) gameFields.hero.specialatk = game.hero.specialatk;
         if(req.body.herospecialdef == null) gameFields.hero.specialdef = game.hero.specialdef;
         if(req.body.heroactivespecmoves == null) gameFields.hero.activespecmoves = game.hero.activespecmoves;
+        if(req.body.herogold == null) gameFields.hero.gold = game.hero.gold;
 
         if(req.body.equipedsword == null) gameFields.hero.equiped.sword = game.hero.equiped.sword;
         if(req.body.equipedsheild == null) gameFields.hero.equiped.sheild = game.hero.equiped.sheild;
